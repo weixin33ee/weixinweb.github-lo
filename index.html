@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>首页 — 内心乌托邦建设局</title>
+<link rel="icon" href="img/logo.png" type="image/png"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- 开场动画 -->
+<div id="intro">
+  <div id="intro-ascii"></div>
+  <div id="intro-msg">[ 正在接入内部乌托邦协议 …… ]</div>
+  <div id="intro-bar"></div>
+</div>
+
+<canvas id="pcv"></canvas>
+<div class="scanlines"></div>
+
+<!-- 导航栏 -->
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">[ UBB ]</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">首页</a></li>
+      <li><a href="entity.html">实体档案</a></li>
+      <li><a href="bureau.html">建设局</a></li>
+      <li><a href="world.html">世界结构</a></li>
+      <li><a href="archive.html">异常档案</a></li>
+      <li><a href="story.html">故事碎片</a></li>
+      <li><a href="relations.html">关系网络</a></li>
+      <li><a href="terminal.html">终端</a></li>
+      <li><a href="status.html">系统状态</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 主展示区 -->
+<main class="wrap">
+<section class="hero">
+  <div class="hero-tag">// 内部系统 v3.7 — 机密访问</div>
+  <h1 class="hero-title">
+    内心乌托邦<br/>
+    <span class="gw" data-text="建设局">建设局</span><br/>
+    建设局
+  </h1>
+  <div class="hero-sub">/ˈjuːˌtoʊpiə ˈbɪldər ˈbjʊəroʊ/</div>
+  <div class="hero-desc">
+    <em>UTOPIA BUILDER BUREAU</em> —— 内心乌托邦建设局，致力于在每一个破碎的内心里，搭建一座可以被称之为「家」的乌托邦。我们记录、维护、收容那些无法被外界理解的灵魂碎片。
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-val">7</div><div class="hstat-lbl">成员</div></div>
+    <div class="hstat"><div class="hstat-val">03</div><div class="hstat-lbl">世界层级</div></div>
+    <div class="hstat"><div class="hstat-val">??</div><div class="hstat-lbl">异常数</div></div>
+  </div>
+  <div class="hero-cta">
+    <a href="entity.html" class="btn btn-outline">[ 01. 实体档案 ]</a>
+    <a href="terminal.html" class="btn btn-ghost">[ 07. 终端模拟器 ]</a>
+  </div>
+</section>
+</main>
+
+<!-- 底部音乐播放器 -->
+<div id="bgm-bar">
+  <div class="bgm-info">
+    <div class="bgm-title">◉ UBB电台 — 频道 0</div>
+    <div class="bgm-sub">氛围频率 // AMBIENT</div>
+  </div>
+  <div class="bgm-controls">
+    <button class="bgm-btn" id="bgm-play">▶ 播放</button>
+    <button class="bgm-btn" id="bgm-stop">■ 停止</button>
+    <button class="bgm-btn" id="bgm-prev">◀◀</button>
+    <button class="bgm-btn" id="bgm-next">▶▶</button>
+  </div>
+  <div class="bgm-progress"><div class="bgm-fill"></div></div>
+  <div class="bgm-viz">
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+  </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="wrap">
+  <div class="foot-in">
+    <div class="foot-logo">[ UBB ] 内心乌托邦建设局</div>
+    <div class="foot-note">仅限内部使用 — 禁止外传</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
+

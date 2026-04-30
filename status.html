@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>SYSTEM STATUS — UBB</title>
+  <link rel="icon" href="img/logo.png" type="image/png"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<canvas id="pcv"></canvas>
+<div class="scanlines"></div>
+
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">[ UBB ]</a>
+    <ul class="nav-links">
+      <li><a href="entity.html">实体档案</a></li>
+      <li><a href="bureau.html">建设局</a></li>
+      <li><a href="world.html">世界结构</a></li>
+      <li><a href="archive.html">异常档案</a></li>
+      <li><a href="story.html">故事碎片</a></li>
+      <li><a href="relations.html">关系网络</a></li>
+      <li><a href="terminal.html">终端</a></li>
+      <li><a href="status.html" class="active">系统状态</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="wrap page-hero">
+  <div class="page-label">SECTION 08</div>
+  <h1 class="page-title">SYSTEM STATUS</h1>
+  <div class="page-line"></div>
+  <div class="page-desc">建设局系统状态实时监控面板。数据每 5 秒刷新一次（模拟）。</div>
+</section>
+
+<main class="wrap">
+<section class="section">
+
+  <div class="sec-hd">
+    <span class="sec-id">[ 08 ]</span>
+    <span class="sec-title">系统状态面板 / STATUS PANEL</span>
+    <span class="sec-sub">[ AUTO-REFRESH: <span id="refresh-timer" style="color:var(--cyan);">5</span>s ]</span>
+  </div>
+
+  <!-- STATUS CARDS -->
+  <div class="status-grid fi">
+
+    <div class="stat-card">
+      <div class="stat-lbl">CORE ENGINE</div>
+      <div class="stat-val c" id="core-val">ONLINE</div>
+      <div class="stat-sub">uptime: 2047h 32m</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-lbl">LAYER-01 SURFACE</div>
+      <div class="stat-val c" id="l1-val">STABLE</div>
+      <div class="stat-sub">occupancy: 3/12</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-lbl">LAYER-02 DEEP</div>
+      <div class="stat-val c" id="l2-val">STABLE</div>
+      <div class="stat-sub">occupancy: 4/??</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-lbl">LAYER-03 ABYSS</div>
+      <div class="stat-val r" id="l3-val">RESTRICTED</div>
+      <div class="stat-sub" style="color:var(--red);">last access: UNKNOWN</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-lbl">ENTITY DATABASE</div>
+      <div class="stat-val g" id="edb-val">7 RECORDS</div>
+      <div class="stat-sub">1 pending review</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-lbl">ANOMALY ALERT</div>
+      <div class="stat-val g" id="alert-val">0 ACTIVE</div>
+      <div class="stat-sub">last: 72h ago</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-lbl">UBB RADIO</div>
+      <div class="stat-val p" id="radio-val">BROADCASTING</div>
+      <div class="stat-sub">channel: 0-6 active</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-lbl">CURRENT USER</div>
+      <div class="stat-val c" id="user-val">Guest/L0</div>
+      <div class="stat-sub">session: <span id="session-time">00:00:00</span></div>
+    </div>
+
+  </div>
+
+  <div class="divider" style="margin:36px 0;"></div>
+
+  <!-- LOG -->
+  <div style="font-family:var(--font-mono);font-size:11px;">
+    <div class="lbl-small">[ RECENT SYSTEM LOG ]</div>
+    <div id="sys-log" style="color:var(--dim);line-height:2.2;max-height:200px;overflow-y:auto;">
+      <div>[20XX.██.██ 08:32:11] Core engine started — v0.7.3</div>
+      <div>[20XX.██.██ 08:33:05] Layer-01 initialized — occupancy: 3</div>
+      <div>[20XX.██.██ 08:35:22] N-17/ZERO logged in — Level 2</div>
+      <div>[20XX.██.██ 09:12:44] UBB-AN-001 ping detected — Surface mirror-A3</div>
+      <div>[20XX.██.██ 10:01:17] N-17/ZERO — status: sleeping (cafeteria)</div>
+      <div>[20XX.██.██ 11:20:33] Automatic backup completed — 7 entities</div>
+      <div id="log-live">[ <span id="log-time">----.--.-- --:--:--</span> ] <span id="log-msg">Monitoring...</span></div>
+    </div>
+  </div>
+
+</section>
+</main>
+
+<!-- BGM BAR -->
+<div id="bgm-bar">
+  <div class="bgm-info">
+    <div class="bgm-title">◉ UBB_RADIO — CHANNEL 7</div>
+    <div class="bgm-sub">STATUS // 状态频率</div>
+  </div>
+  <div class="bgm-controls">
+    <button class="bgm-btn" id="bgm-play">▶ PLAY</button>
+    <button class="bgm-btn" id="bgm-stop">■ STOP</button>
+  </div>
+  <div class="bgm-progress"><div class="bgm-fill"></div></div>
+  <div class="bgm-viz">
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+  </div>
+</div>
+
+<footer class="wrap">
+  <div class="foot-in">
+    <div class="foot-logo">[ UBB ] 内心乌托邦建设局</div>
+    <div class="foot-note">LIVE STATUS — AUTO-UPDATING</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Live status simulation
+(function(){
+  // Session timer
+  let sec = 0;
+  setInterval(()=>{
+    sec++;
+    const h = String(Math.floor(sec/3600)).padStart(2,'0');
+    const m = String(Math.floor((sec%3600)/60)).padStart(2,'0');
+    const s = String(sec%60).padStart(2,'0');
+    const el = document.getElementById('session-time');
+    if(el) el.textContent = h+':'+m+':'+s;
+  },1000);
+
+  // Fake log messages
+  const logMsgs = [
+    'System heartbeat — all green',
+    'N-17/ZERO activity detected — cafeteria',
+    'UBB-AN-001: no new pings',
+    'Automatic system check — passed',
+    'UBB Radio: now playing Channel '+Math.floor(Math.random()*7),
+    'Layer-02: all sectors nominal',
+    '(安静。没有异常。)',
+    'N-17/ZERO — status: awake? maybe?',
+  ];
+  let logIdx = 0;
+  setInterval(()=>{
+    logIdx = (logIdx+1) % logMsgs.length;
+    const now = new Date();
+    const ts = now.getFullYear()+'.'+
+      String(now.getMonth()+1).padStart(2,'0')+'.'+
+      String(now.getDate()).padStart(2,'0')+' '+
+      String(now.getHours()).padStart(2,'0')+':'+
+      String(now.getMinutes()).padStart(2,'0')+':'+
+      String(now.getSeconds()).padStart(2,'0');
+    const tEl = document.getElementById('log-time');
+    const mEl = document.getElementById('log-msg');
+    if(tEl) tEl.textContent = ts;
+    if(mEl) mEl.textContent = logMsgs[logIdx];
+  },5000);
+
+  // Refresh timer
+  let ref = 5;
+  setInterval(()=>{
+    ref--;
+    if(ref<0) ref=5;
+    const el = document.getElementById('refresh-timer');
+    if(el) el.textContent = ref;
+  },1000);
+})();
+</script>
+</body>
+</html>
+
+

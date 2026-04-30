@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>异常档案 — 内心乌托邦建设局</title>
+  <link rel="icon" href="img/logo.png" type="image/png"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<canvas id="pcv"></canvas>
+<div class="scanlines"></div>
+
+<!-- 导航栏 -->
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">[ UBB ]</a>
+    <ul class="nav-links">
+      <li><a href="entity.html">实体档案</a></li>
+      <li><a href="bureau.html">建设局</a></li>
+      <li><a href="world.html">世界结构</a></li>
+      <li><a href="archive.html" class="active">异常档案</a></li>
+      <li><a href="story.html">故事碎片</a></li>
+      <li><a href="relations.html">关系网络</a></li>
+      <li><a href="terminal.html">终端</a></li>
+      <li><a href="status.html">系统状态</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 页面标题 -->
+<section class="wrap page-hero">
+  <div class="page-label">板块 04</div>
+  <h1 class="page-title">异常档案</h1>
+  <div class="page-line"></div>
+  <div class="page-desc">建设局收录的异常实体与内心碎片档案。部分档案需要相应权限解锁。</div>
+</section>
+
+<main class="wrap">
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-id">[ 04 ]</span>
+    <span class="sec-title">异常档案列表</span>
+  </div>
+
+  <div class="anomaly-list">
+
+    <!-- 档案 01 -->
+    <div class="anomaly-entry fi">
+      <div class="ae-head">
+        <span class="ae-code">UBB-AN-001</span>
+        <span class="ae-class red">EUCLID</span>
+        <button class="ae-lock">[ 权限不足，点击解锁 ]</button>
+      </div>
+      <div class="ae-body locked">
+        <div class="ae-title">「镜中人」— The Mirror Man</div>
+        <div class="ae-text">
+          一种出现在<em>任何反射表面</em>中的异常实体。会模仿目标的动作，但在目标闭眼时做出<em class="red">不同动作</em>。已被收容于深区的<a href="world.html" style="color:var(--cyan);">收容区</a>。
+          <br/><br/>
+          备注：N-17 曾与之接触，据称对方说了一句「你还不明白吗」。
+        </div>
+        <div class="ae-meta">
+          <span class="ae-mi">收容地点：<span>深区 / 收容区-B</span></span>
+          <span class="ae-mi">危险等级：<span class="red">中等</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 档案 02 -->
+    <div class="anomaly-entry fi">
+      <div class="ae-head">
+        <span class="ae-code">UBB-AN-007</span>
+        <span class="ae-class gold">SAFE</span>
+        <button class="ae-lock">[ 权限不足，点击解锁 ]</button>
+      </div>
+      <div class="ae-body locked">
+        <div class="ae-title">「万宝眠」— Ten Thousand Treasures Sleep</div>
+        <div class="ae-text">
+          N-17 随身物品之一，外观为一<em>生锈的小铁盒</em>。内部空间与现实不符，可容纳远超外观体积的物品。目前由 N-17 自行保管，建设局已备案。
+          <br/><br/>
+          注：打开铁盒时有时会听到<em>摇篮曲</em>声，来源不明。
+        </div>
+        <div class="ae-meta">
+          <span class="ae-mi">持有者：<span>N-17 / ZERO</span></span>
+          <span class="ae-mi">危险等级：<span style="color:var(--gold);">低</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 档案 03 -->
+    <div class="anomaly-entry fi">
+      <div class="ae-head">
+        <span class="ae-code">UBB-AN-013</span>
+        <span class="ae-class cyan">THAUMIEL</span>
+        <button class="ae-lock">[ 权限不足，点击解锁 ]</button>
+      </div>
+      <div class="ae-body locked">
+        <div class="ae-title">「中嗝嗝」— The Mid-Hiccup</div>
+        <div class="ae-text">
+          N-17 的随身物品之一，一个<em>会打嗝的陶瓷杯子</em>。每次打嗝会随机出现在建设局内不同位置。已被观察到「打嗝」至深渊层并安全返回。
+          <br/><br/>
+          目前分类为<em>Thaumiel</em>级，因为其行为可能暗示<em>跨层级传送</em>的可能性。
+        </div>
+        <div class="ae-meta">
+          <span class="ae-mi">持有者：<span>N-17 / ZERO</span></span>
+          <span class="ae-mi">危险等级：<span style="color:var(--cyan);">未定</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 档案 04 — 锁定 -->
+    <div class="anomaly-entry fi">
+      <div class="ae-head">
+        <span class="ae-code">UBB-AN-███</span>
+        <span class="ae-class red">KETER</span>
+        <button class="ae-lock">[ 需要 Level 4 权限 ]</button>
+      </div>
+      <div class="ae-body locked">
+        <div class="ae-title">【数据删除】</div>
+        <div class="ae-text" style="color:rgba(255,255,255,0.08);">
+          访问权限不足。此档案已封存于深渊层。
+          任何未经授权的访问尝试将被记录并报告给监管部。
+          <br/><br/>
+          ████ ████ █████ ████ ██████ ████ ████████
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<!-- 底部音乐播放器 -->
+<div id="bgm-bar">
+  <div class="bgm-info">
+    <div class="bgm-title">◉ UBB电台 — 频道 3</div>
+    <div class="bgm-sub">高频杂音 // HI-FREQ</div>
+  </div>
+  <div class="bgm-controls">
+    <button class="bgm-btn" id="bgm-play">▶ 播放</button>
+    <button class="bgm-btn" id="bgm-stop">■ 停止</button>
+  </div>
+  <div class="bgm-progress"><div class="bgm-fill"></div></div>
+  <div class="bgm-viz">
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+  </div>
+</div>
+
+<footer class="wrap">
+  <div class="foot-in">
+    <div class="foot-logo">[ UBB ] 内心乌托邦建设局</div>
+    <div class="foot-note">仅限内部使用 — 档案访问将被记录</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
