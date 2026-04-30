@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>建设局 — 内心乌托邦建设局</title>
+  <link rel="icon" href="img/logo.png" type="image/png"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<canvas id="pcv"></canvas>
+<div class="scanlines"></div>
+
+<!-- 导航栏 -->
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">[ UBB ]</a>
+    <ul class="nav-links">
+      <li><a href="entity.html">实体档案</a></li>
+      <li><a href="bureau.html" class="active">建设局</a></li>
+      <li><a href="world.html">世界结构</a></li>
+      <li><a href="archive.html">异常档案</a></li>
+      <li><a href="story.html">故事碎片</a></li>
+      <li><a href="relations.html">关系网络</a></li>
+      <li><a href="terminal.html">终端</a></li>
+      <li><a href="status.html">系统状态</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 页面标题 -->
+<section class="wrap page-hero">
+  <div class="page-label">板块 02</div>
+  <h1 class="page-title">建设局介绍</h1>
+  <div class="page-line"></div>
+  <div class="page-desc">内心乌托邦建设局（UTOPIA BUILDER BUREAU）组织架构与成员等级说明。</div>
+</section>
+
+<main class="wrap">
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-id">[ 02 ]</span>
+    <span class="sec-title">机构介绍</span>
+  </div>
+
+  <div class="fi" style="max-width:720px;">
+    <p style="font-size:13px;color:#8A90A2;line-height:2.2;margin-bottom:18px;">
+      <strong style="color:var(--text);">内心乌托邦建设局</strong> —— 一个存在于意识深处的秘密机构。使命：在每一个破碎的内心里，搭建一座可以被称之为「家」的乌托邦。
+    </p>
+    <p style="font-size:13px;color:#8A90A2;line-height:2.2;margin-bottom:18px;">
+      建设局不受现实物理法则约束，其设施分布在<em style="color:var(--cyan);font-style:normal;">三层叠加世界</em>之中。成员来自不同时空，因各自的「内心碎片」被收容而加入。
+    </p>
+    <p style="font-size:13px;color:#8A90A2;line-height:2.2;">
+      本机构对所有成员提供<em style="color:var(--cyan);font-style:normal;">食宿、医疗保障、心理支持</em>，以及适量的自由行动权限。但背叛行为将导致立即驱逐及记忆清除。
+    </p>
+  </div>
+
+  <div class="divider" style="margin:32px 0;"></div>
+
+  <!-- 成员等级 -->
+  <div class="sec-hd" style="margin-top:40px;">
+    <span class="sec-id">[ 02-B ]</span>
+    <span class="sec-title">成员等级</span>
+  </div>
+
+  <div class="fi">
+    <table class="rank-table">
+      <thead>
+        <tr><th>等级</th><th>称号</th><th>权限</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="rt-c">Level 0</td><td>访客</td><td>公共区域通行</td></tr>
+        <tr><td class="rt-c">Level 1</td><td>见习</td><td>基础设施通行</td></tr>
+        <tr><td class="rt-g">Level 2</td><td>成员</td><td>居住区 + 工作区</td></tr>
+        <tr><td class="rt-g">Level 3</td><td>组长</td><td>跨区调度权限</td></tr>
+        <tr><td class="rt-r">Level 4</td><td>监管</td><td>档案完全访问</td></tr>
+        <tr><td class="rt-r">Level 5</td><td>局长</td><td>全域控制权</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider" style="margin:32px 0;"></div>
+
+  <!-- 部门介绍 -->
+  <div class="sec-hd" style="margin-top:40px;">
+    <span class="sec-id">[ 02-C ]</span>
+    <span class="sec-title">部门介绍</span>
+  </div>
+
+  <div class="bureau-grid fi">
+    <div class="bureau-card">
+      <div class="bc-icon">[ 部门 01 ]</div>
+      <div class="bc-name">记录部</div>
+      <div class="bc-desc">负责所有实体档案、异常报告及历史记录的整理与维护。资料记录员在此部门工作。</div>
+    </div>
+    <div class="bureau-card">
+      <div class="bc-icon">[ 部门 02 ]</div>
+      <div class="bc-name">维修部</div>
+      <div class="bc-desc">维护三层世界中所有设施的运行。包括电力系统、生命支持、以及「世界边界」的稳定装置。</div>
+    </div>
+    <div class="bureau-card">
+      <div class="bc-icon">[ 部门 03 ]</div>
+      <div class="bc-name">收容部</div>
+      <div class="bc-desc">负责识别、收容、管控异常实体与危险碎片。直接进入战场的第一线部门。</div>
+    </div>
+    <div class="bureau-card">
+      <div class="bc-icon">[ 部门 04 ]</div>
+      <div class="bc-name">心理部</div>
+      <div class="bc-desc">为成员提供心理支持与内心碎片的分析服务。确保每位成员的「乌托邦」稳定存在。</div>
+    </div>
+  </div>
+
+</section>
+</main>
+
+<!-- 底部音乐播放器 -->
+<div id="bgm-bar">
+  <div class="bgm-info">
+    <div class="bgm-title">◉ UBB电台 — 频道 1</div>
+    <div class="bgm-sub">低频 // LOW-FREQ</div>
+  </div>
+  <div class="bgm-controls">
+    <button class="bgm-btn" id="bgm-play">▶ 播放</button>
+    <button class="bgm-btn" id="bgm-stop">■ 停止</button>
+  </div>
+  <div class="bgm-progress"><div class="bgm-fill"></div></div>
+  <div class="bgm-viz">
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+  </div>
+</div>
+
+<footer class="wrap">
+  <div class="foot-in">
+    <div class="foot-logo">[ UBB ] 内心乌托邦建设局</div>
+    <div class="foot-note">仅限内部使用</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
+

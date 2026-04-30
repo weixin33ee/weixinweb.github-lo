@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>终端模拟器 — 内心乌托邦建设局</title>
+  <link rel="icon" href="img/logo.png" type="image/png"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<canvas id="pcv"></canvas>
+<div class="scanlines"></div>
+
+<!-- 导航栏 -->
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">[ UBB ]</a>
+    <ul class="nav-links">
+      <li><a href="entity.html">实体档案</a></li>
+      <li><a href="bureau.html">建设局</a></li>
+      <li><a href="world.html">世界结构</a></li>
+      <li><a href="archive.html">异常档案</a></li>
+      <li><a href="story.html">故事碎片</a></li>
+      <li><a href="relations.html">关系网络</a></li>
+      <li><a href="terminal.html" class="active">终端</a></li>
+      <li><a href="status.html">系统状态</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 页面标题 -->
+<section class="wrap page-hero">
+  <div class="page-label">板块 07</div>
+  <h1 class="page-title">UBB 终端</h1>
+  <div class="page-line"></div>
+  <div class="page-desc">建设局内部终端模拟器。输入 <span style="color:var(--cyan);">help</span> 查看可用指令。祝你不触发警报。</div>
+</section>
+
+<main class="wrap">
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-id">[ 07 ]</span>
+    <span class="sec-title">终端模拟器</span>
+  </div>
+
+  <div class="terminal fi">
+    <div class="term-output" id="term-output">
+      <div class="t-sys">// 内心乌托邦建设局 — 内部安全终端</div>
+      <div class="t-sys">// 终端版本 v0.7.3 — 访客会话（Level 0）</div>
+      <div class="t-dim" style="margin-top:8px;">输入 help 查看可用指令，然后按回车执行。</div>
+      <br/>
+    </div>
+    <div class="term-input-row">
+      <span class="term-prompt">ubb@terminal:~$</span>
+      <input type="text" class="term-input" id="term-input" autocomplete="off"/>
+    </div>
+    <div class="term-hint">[ 提示：试试输入 'zero'、'mirror'、'decode' ]</div>
+  </div>
+
+  <!-- decode 解锁提示（终端输入 decode 后显示）-->
+  <div id="decode-reveal" style="display:none;margin-top:24px;padding:20px;border:1px solid rgba(232,201,106,0.2);background:rgba(232,201,106,0.03);">
+    <div style="font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:2px;margin-bottom:12px;">[ 加密碎片已解锁 ]</div>
+    <div style="font-size:13px;color:var(--text);line-height:2;">
+      隐藏角色线索已解锁。前往 <a href="relations.html" style="color:var(--gold);">关系网络</a> 查看。<br/>
+      或者，在终端输入 <span style="color:var(--cyan);">access 00</span> 获取最后一段信息。
+    </div>
+  </div>
+
+</section>
+</main>
+
+<!-- 底部音乐播放器 -->
+<div id="bgm-bar">
+  <div class="bgm-info">
+    <div class="bgm-title">◉ UBB电台 — 频道 6</div>
+    <div class="bgm-sub">静电噪音 // STATIC</div>
+  </div>
+  <div class="bgm-controls">
+    <button class="bgm-btn" id="bgm-play">▶ 播放</button>
+    <button class="bgm-btn" id="bgm-stop">■ 停止</button>
+  </div>
+  <div class="bgm-progress"><div class="bgm-fill"></div></div>
+  <div class="bgm-viz">
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+    <div class="bgm-bar-v"></div>
+  </div>
+</div>
+
+<footer class="wrap">
+  <div class="foot-in">
+    <div class="foot-logo">[ UBB ] 内心乌托邦建设局</div>
+    <div class="foot-note">终端会话将被记录 — 别做傻事</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/terminal.js"></script>
+</body>
+</html>
+
+
